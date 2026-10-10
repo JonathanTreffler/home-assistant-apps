@@ -1,0 +1,21 @@
+name: "HA Cloud/Link SSL Exporter"
+description: "Exports the SSL certificate and key used by NabuCasa HomeAssistant Link (previously Cloud) to /ssl (remote_fullchain.pem and remote_private.pem) so it can also be used for other purposes like local-network ssl or mqtt. Automatically checks for changes once an hour. Can be configured to automatically restart other apps after cert renewals."
+version: "1.0.0"
+slug: "ha_link_ssl_exporter"
+init: false
+hassio_api: true
+hassio_role: manager
+map:
+  - type: homeassistant_config
+    path: /homeassistant_config/
+  - type: ssl
+    path: /ssl/
+    read_only: false
+options:
+  auto_restart_apps: []
+schema:
+  auto_restart_apps:
+    - str
+arch:
+  - aarch64
+  - amd64

@@ -1,0 +1,4 @@
+configuration:
+  auto_restart_apps:
+    name: Auto Restart HA Apps
+    description: Slugs of apps to restart when the cert/key changes (for example core_mosquitto) (see URL of app config website)

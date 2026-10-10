@@ -1,0 +1,4 @@
+@hourly /copy_certs.sh
+
+# every minute for debugging
+#*/1 * * * * /copy_certs.sh
